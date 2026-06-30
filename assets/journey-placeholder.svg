@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+    <title id="title">Vietnam journey image placeholder</title>
+    <desc id="desc">A soft pink and ivory travel image placeholder with abstract mountains and sun.</desc>
+    <defs>
+        <linearGradient id="sky" x1="94" y1="0" x2="806" y2="620" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.5" stop-color="#fff8fb"/>
+            <stop offset="1" stop-color="#ffe2ee"/>
+        </linearGradient>
+        <linearGradient id="mountain" x1="120" y1="255" x2="790" y2="560" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ff8ab4"/>
+            <stop offset="1" stop-color="#e54885"/>
+        </linearGradient>
+        <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#ff5f95" stop-opacity="0.35"/>
+        </radialGradient>
+    </defs>
+    <rect width="900" height="620" fill="url(#sky)"/>
+    <circle cx="685" cy="162" r="96" fill="url(#sun)"/>
+    <path d="M0 443 152 304l128 99 174-178 166 194 112-98 168 136v163H0Z" fill="url(#mountain)" opacity="0.86"/>
+    <path d="M0 504c122-57 246-57 372 0s250 57 372 0c55-26 107-38 156-38v154H0Z" fill="#ffffff" opacity="0.42"/>
+    <path d="M82 102h256" stroke="#ff5f95" stroke-width="5" stroke-linecap="round" opacity="0.18"/>
+    <path d="M82 130h162" stroke="#ff5f95" stroke-width="5" stroke-linecap="round" opacity="0.13"/>
+</svg>

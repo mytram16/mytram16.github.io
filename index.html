@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mỹ Trâm | Vietnam Specialist & Travel Storyteller</title>
+    <meta name="description" content="A personal travel journal by Mỹ Trâm, sharing gentle journeys, cultural stories, and emotional frames from Vietnam.">
+    <link rel="canonical" href="https://example.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mỹ Trâm | Vietnam Specialist & Travel Storyteller">
+    <meta property="og:description" content="A personal travel journal by Mỹ Trâm, sharing gentle journeys, cultural stories, and emotional frames from Vietnam.">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:image" content="https://example.com/assets/images/hero.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mỹ Trâm | Vietnam Specialist & Travel Storyteller">
+    <meta name="twitter:description" content="A personal travel journal by Mỹ Trâm, sharing gentle journeys, cultural stories, and emotional frames from Vietnam.">
+    <meta name="twitter:image" content="https://example.com/assets/images/hero.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></symbol>
+        <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="m12 19V5"></path><path d="m5 12 7-7 7 7"></path></symbol>
+        <symbol id="icon-book-open" viewBox="0 0 24 24"><path d="M12 7v14"></path><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H12v18H5.5A2.5 2.5 0 0 1 3 18.5z"></path><path d="M12 3h6.5A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5H12z"></path></symbol>
+        <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M14.5 4 16 7h3a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3l1.5-3z"></path><circle cx="12" cy="13" r="3.5"></circle></symbol>
+        <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m15.5 8.5-2 5-5 2 2-5z"></path></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M14 8h2V4h-2a4 4 0 0 0-4 4v3H8v4h2v5h4v-5h2.5l.5-4h-3z"></path></symbol>
+        <symbol id="icon-flower" viewBox="0 0 24 24"><path d="M12 8.5C12 5.5 10.6 4 8.8 4 7.3 4 6 5.2 6 6.8c0 1.8 1.5 3.2 4.5 3.2"></path><path d="M15.5 10c3 0 4.5-1.4 4.5-3.2C20 5.2 18.7 4 17.2 4 15.4 4 14 5.5 14 8.5"></path><path d="M14 15.5c0 3 1.4 4.5 3.2 4.5 1.5 0 2.8-1.2 2.8-2.8 0-1.8-1.5-3.2-4.5-3.2"></path><path d="M10 15.5c-3 0-4.5 1.4-4.5 3.2 0 1.6 1.3 2.8 2.8 2.8 1.8 0 3.2-1.5 3.2-4.5"></path><circle cx="12" cy="12" r="2.2"></circle></symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18"></path><path d="M12 3a14 14 0 0 0 0 18"></path></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.5"></circle><path d="M17.5 6.8h.01"></path></symbol>
+        <symbol id="icon-landmark" viewBox="0 0 24 24"><path d="M4 10h16"></path><path d="M6 10v8"></path><path d="M10 10v8"></path><path d="M14 10v8"></path><path d="M18 10v8"></path><path d="M3 20h18"></path><path d="m12 3 8 5H4z"></path></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></symbol>
+        <symbol id="icon-map" viewBox="0 0 24 24"><path d="m3 6 6-2 6 2 6-2v14l-6 2-6-2-6 2z"></path><path d="M9 4v14"></path><path d="M15 6v14"></path></symbol>
+        <symbol id="icon-map-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
+        <symbol id="icon-message-circle" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L4 20l1.1-4.1A8.5 8.5 0 1 1 21 11.5Z"></path></symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 7 7 0 1 0 20.5 14.5Z"></path></symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 16.9v2.4a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.2 19.2 0 0 1-5.9-5.9A19.8 19.8 0 0 1 2.2 3.7 2 2 0 0 1 4.2 1.5h2.4a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.5 1.7L7.5 9a16 16 0 0 0 7.5 7.5l1.1-1.1a2 2 0 0 1 1.7-.5l3 .5a2 2 0 0 1 1.2 1.5Z"></path></symbol>
+        <symbol id="icon-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v2.4a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.2 19.2 0 0 1-5.9-5.9A19.8 19.8 0 0 1 2.2 3.7 2 2 0 0 1 4.2 1.5h2.4a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.5 1.7L7.5 9a16 16 0 0 0 7.5 7.5l1.1-1.1a2 2 0 0 1 1.7-.5l3 .5a2 2 0 0 1 1.2 1.5Z"></path><path d="M15 3.5a5.5 5.5 0 0 1 5.5 5.5"></path><path d="M15 7a2 2 0 0 1 2 2"></path></symbol>
+        <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></symbol>
+        <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></symbol>
+        <symbol id="icon-tiktok" viewBox="0 0 24 24"><path d="M14 4v11.2a4 4 0 1 1-4-4"></path><path d="M14 4c1 3 2.8 4.8 6 5"></path></symbol>
+        <symbol id="icon-utensils-crossed" viewBox="0 0 24 24"><path d="m16 2-3.5 3.5"></path><path d="m19 5-3.5 3.5"></path><path d="m22 8-7.5 7.5"></path><path d="m2 22 8-8"></path><path d="M7 2v7"></path><path d="M4 2v7"></path><path d="M10 2v7a3 3 0 0 1-6 0"></path><path d="m7 12 9 9"></path></symbol>
+        <symbol id="icon-user-round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></symbol>
+        <symbol id="icon-video" viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="12" rx="2"></rect><path d="m17 10 4-2.5v9L17 14z"></path></symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.8a8.5 8.5 0 0 1-12.4 7.5L4 20.4l1.1-4A8.5 8.5 0 1 1 20.5 11.8Z"></path><path d="M9.2 8.7c.2 3.4 2.7 5.7 6 6.1"></path><path d="m9.2 8.7 1.1-.9 1.1 1.8-.8.8"></path><path d="m15.2 14.8.8-.8 1.8 1.1-.9 1.1"></path></symbol>
+        <symbol id="icon-youtube" viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="11" rx="3"></rect><path d="m10 10 5 2-5 2z"></path></symbol>
+        <symbol id="icon-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></symbol>
+    </svg>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-wrapper">
+                <div class="logo-section">
+                    <h1 class="logo">Mỹ Trâm</h1>
+                    <span class="logo-subtitle">Vietnam Specialist | Travel Storyteller</span>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#journey" class="nav-link">Journey</a></li>
+                    <li><a href="#explore" class="nav-link">Explore</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#stories" class="nav-link">Stories</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <!-- Dark Mode Toggle & Theme Button -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-moon"></use></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+        <div class="hero-orb hero-orb-three"></div>
+
+        <div class="hero-content">
+            <div class="hero-copy">
+                <p class="hero-kicker fade-in-up">Xin chào • Hello</p>
+                <h1 class="hero-title fade-in-up" style="animation-delay: 0.15s">Mỹ Trâm</h1>
+                <p class="hero-role-vi text-vi fade-in-up" style="animation-delay: 0.22s">Người kể chuyện du lịch bằng những hành trình dịu dàng.</p>
+                <div class="hero-roles fade-in-up" style="animation-delay: 0.3s" aria-label="Travel Storyteller, Vietnam Specialist, Tour Guide, Cultural Interpreter">
+                    <span class="role-prefix">I am a</span>
+                    <span class="role-window" aria-hidden="true">
+                        <span class="role-list">
+                            <span>Travel Storyteller</span>
+                            <span>Vietnam Specialist</span>
+                            <span>Tour Guide</span>
+                            <span>Cultural Interpreter</span>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="hero-intro fade-in-up" style="animation-delay: 0.45s">
+                    <p class="intro-vi text-vi">Tôi là Mỹ Trâm, người kể chuyện du lịch bằng những hành trình dịu dàng, những khung hình giàu cảm xúc và tình yêu sâu sắc dành cho Việt Nam.</p>
+                    <p class="intro-en text-en">I am Mỹ Trâm, a travel storyteller through gentle journeys, emotional frames, and a deep love for Vietnam.</p>
+                    <p class="intro-vi text-vi">Mỗi chuyến đi với tôi là một cơ hội để lắng nghe, cảm nhận và kể lại những câu chuyện đẹp của con người, văn hóa và vùng đất Việt Nam.</p>
+                    <p class="intro-en text-en">Every journey to me is a chance to listen, feel, and retell beautiful stories of Vietnam's people, culture, and landscapes.</p>
+                </div>
+
+                <div class="hero-badges fade-in-up" style="animation-delay: 0.55s">
+                    <span class="hero-badge"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>Vietnam Specialist</span>
+                    <span class="hero-badge"><svg class="icon" aria-hidden="true"><use href="#icon-camera"></use></svg>Visual Storytelling</span>
+                    <span class="hero-badge"><svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>English Guide</span>
+                </div>
+
+                <div class="hero-buttons fade-in-up" style="animation-delay: 0.7s">
+                    <a href="#explore" class="cta-button primary">Explore Vietnam <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+                    <a href="#contact" class="cta-button secondary">Let's Connect <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+                </div>
+            </div>
+
+            <div class="hero-portrait-panel fade-in-up" style="animation-delay: 0.35s">
+                <div class="portrait-glow"></div>
+                <div class="profile-image-wrapper">
+                    <img src="assets/images/hero.png" alt="Mỹ Trâm" class="profile-image" width="1023" height="1537" loading="eager" fetchpriority="high" decoding="async">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title"><svg class="icon section-title-icon" aria-hidden="true"><use href="#icon-user-round"></use></svg>Giới thiệu</h2>
+                <p class="section-subtitle text-en">About Me</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3 class="about-subtitle">Chào mừng đến với hành trình của tôi</h3>
+                    <p class="about-subtitle-en text-en">Welcome to my journey</p>
+                    <p class="about-para-vi text-vi">Với hơn 10 năm kinh nghiệm là hướng dẫn viên du lịch, tôi có cơ hội chia sẻ văn hóa phong phú, cảnh quan tuyệt đẹp và lòng hiếu khách ấm áp của Việt Nam với du khách từ khắp nơi trên thế giới.</p>
+                    <p class="about-para-en text-en">With over 10 years of experience as a tour guide, I have the opportunity to share Vietnam's rich culture, stunning landscapes, and warm hospitality with travelers from around the world.</p>
+
+                    <div class="recent-journey-card glass">
+                        <div class="recent-journey-kicker"><svg class="icon recent-journey-icon" aria-hidden="true"><use href="#icon-map"></use></svg>Hành trình gần nhất</div>
+                        <p class="recent-journey-subtitle text-en">Recent Journey</p>
+                        <h4>Miền Trung Việt Nam</h4>
+                        <p class="text-vi">Một hành trình nhẹ nhàng qua những vùng đất miền Trung, nơi văn hóa, biển xanh và nhịp sống địa phương hòa vào nhau.</p>
+                        <p class="text-en">A gentle journey through Central Vietnam, where culture, blue seas, and local life come together.</p>
+                        <div class="recent-journey-tags">
+                            <span>Culture</span>
+                            <span>Coastline</span>
+                            <span>Local Life</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="about-story-cards fade-in" style="animation-delay: 0.2s">
+                    <div class="about-story-card glass">
+                        <span class="story-card-icon" aria-hidden="true"><svg class="icon"><use href="#icon-landmark"></use></svg></span>
+                        <h4 class="about-story-title text-vi">Văn hóa</h4>
+                        <span class="about-story-kicker text-en">Culture</span>
+                        <p class="text-vi">Lắng nghe những câu chuyện ẩn sau mỗi vùng đất.</p>
+                        <p class="text-en">Listen to the stories hidden within every destination.</p>
+                    </div>
+                    <div class="about-story-card glass">
+                        <span class="story-card-icon" aria-hidden="true"><svg class="icon"><use href="#icon-utensils-crossed"></use></svg></span>
+                        <h4 class="about-story-title text-vi">Ẩm thực</h4>
+                        <span class="about-story-kicker text-en">Cuisine</span>
+                        <p class="text-vi">Thưởng thức Việt Nam qua những hương vị địa phương.</p>
+                        <p class="text-en">Experience Vietnam through its local flavors.</p>
+                    </div>
+                    <div class="about-story-card glass">
+                        <span class="story-card-icon" aria-hidden="true"><svg class="icon"><use href="#icon-book-open"></use></svg></span>
+                        <h4 class="about-story-title text-vi">Kể chuyện</h4>
+                        <span class="about-story-kicker text-en">Storytelling</span>
+                        <p class="text-vi">Biến mỗi chuyến đi thành một ký ức đáng nhớ.</p>
+                        <p class="text-en">Turn every journey into a memorable story.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-contact-card glass fade-in">
+                <div class="about-contact-header">
+                    <h4>Thông tin liên lạc</h4>
+                    <p class="text-en">Contact for Work</p>
+                    <p class="text-vi">Kết nối để trao đổi công việc, tour riêng hoặc những dự án kể chuyện du lịch.</p>
+                    <p class="text-en">Connect for work inquiries, private tours, or travel storytelling projects.</p>
+                </div>
+
+                <div class="about-contact-layout">
+                    <div class="about-contact-grid">
+                        <a href="mailto:your-email@gmail.com" class="about-contact-item">
+                            <span class="about-contact-icon" aria-hidden="true"><svg class="icon"><use href="#icon-mail"></use></svg></span>
+                            <span>
+                                <span class="about-contact-label text-vi">Gmail</span>
+                                <span class="about-contact-value text-en">your-email@gmail.com</span>
+                            </span>
+                        </a>
+                        <a href="tel:+84000000000" class="about-contact-item">
+                            <span class="about-contact-icon" aria-hidden="true"><svg class="icon"><use href="#icon-phone"></use></svg></span>
+                            <span>
+                                <span class="about-contact-label text-vi">Số điện thoại</span>
+                                <span class="about-contact-value text-en">+84 000 000 000</span>
+                            </span>
+                        </a>
+                        <a href="tel:+84000000000" class="about-contact-item">
+                            <span class="about-contact-icon" aria-hidden="true"><svg class="icon"><use href="#icon-message-circle"></use></svg></span>
+                            <span>
+                                <span class="about-contact-label text-vi">Zalo</span>
+                                <span class="about-contact-value text-en">+84 000 000 000</span>
+                            </span>
+                        </a>
+                        <a href="https://wa.me/84000000000" class="about-contact-item">
+                            <span class="about-contact-icon" aria-hidden="true"><svg class="icon"><use href="#icon-whatsapp"></use></svg></span>
+                            <span>
+                                <span class="about-contact-label text-vi">WhatsApp</span>
+                                <span class="about-contact-value text-en">+84 000 000 000</span>
+                            </span>
+                        </a>
+                        <a href="tel:+84000000000" class="about-contact-item">
+                            <span class="about-contact-icon" aria-hidden="true"><svg class="icon"><use href="#icon-phone-call"></use></svg></span>
+                            <span>
+                                <span class="about-contact-label text-vi">Viber</span>
+                                <span class="about-contact-value text-en">+84 000 000 000</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="about-contact-qr" aria-label="QR code placeholder">
+                        <div class="qr-placeholder">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text-en">Scan to Connect</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="journey">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title"><svg class="icon section-title-icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>Journey Across Vietnam</h2>
+                <p class="section-subtitle text-vi">Một nhật ký du lịch sang trọng từ Bắc vào Nam</p>
+                <p class="section-subtitle text-en">A luxury travel journal from north to south</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="journey-timeline">
+                <article class="journey-stop fade-in-left">
+                    <div class="journey-marker" aria-hidden="true"><svg class="icon"><use href="#icon-map-pin"></use></svg></div>
+                    <div class="journey-card glass">
+                        <div class="journey-image">
+                            <img src="assets/journey-placeholder.svg" alt="Hanoi image placeholder" width="900" height="620" loading="lazy" decoding="async">
+                        </div>
+                        <div class="journey-card-body">
+                            <span class="journey-region"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg> Northern Vietnam</span>
+                            <h3>Hanoi</h3>
+                            <p class="text-vi">Những buổi sáng ở phố cổ, sự yên bình bên hồ và những góc cà phê khiến mỗi con phố như một trang nhật ký du lịch thân thương.</p>
+                            <p class="text-en">Old Quarter mornings, lakeside calm, and cafe corners make every street feel like a page from a beloved travel diary.</p>
+                            <a href="#explore" class="journey-explore">Explore <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="journey-stop fade-in-right">
+                    <div class="journey-marker" aria-hidden="true"><svg class="icon"><use href="#icon-map-pin"></use></svg></div>
+                    <div class="journey-card glass">
+                        <div class="journey-image">
+                            <img src="assets/journey-placeholder.svg" alt="Ninh Binh image placeholder" width="900" height="620" loading="lazy" decoding="async">
+                        </div>
+                        <div class="journey-card-body">
+                            <span class="journey-region"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg> Limestone Valleys</span>
+                            <h3>Ninh Binh</h3>
+                            <p class="text-vi">Một chuyến thuyền chậm qua vách núi xanh, ruộng lúa và những ngôi chùa tĩnh lặng trong vẻ đẹp dịu dàng của miền Bắc.</p>
+                            <p class="text-en">A slow boat ride through emerald cliffs, rice fields, and quiet temples in the gentle beauty of Northern Vietnam.</p>
+                            <a href="#explore" class="journey-explore">Explore <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="journey-stop fade-in-left">
+                    <div class="journey-marker" aria-hidden="true"><svg class="icon"><use href="#icon-map-pin"></use></svg></div>
+                    <div class="journey-card glass">
+                        <div class="journey-image">
+                            <img src="assets/journey-placeholder.svg" alt="Hue image placeholder" width="900" height="620" loading="lazy" decoding="async">
+                        </div>
+                        <div class="journey-card-body">
+                            <span class="journey-region"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg> Imperial Heritage</span>
+                            <h3>Hue</h3>
+                            <p class="text-vi">Cổng thành, nhà vườn và những buổi chiều bên sông Hương đưa ký ức cung đình Việt Nam về với hiện tại đầy duyên dáng.</p>
+                            <p class="text-en">Royal gates, garden houses, and evenings by the Perfume River bring Vietnam's imperial memories into a graceful present.</p>
+                            <a href="#explore" class="journey-explore">Explore <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="journey-stop fade-in-right">
+                    <div class="journey-marker" aria-hidden="true"><svg class="icon"><use href="#icon-map-pin"></use></svg></div>
+                    <div class="journey-card glass">
+                        <div class="journey-image">
+                            <img src="assets/journey-placeholder.svg" alt="Da Nang image placeholder" width="900" height="620" loading="lazy" decoding="async">
+                        </div>
+                        <div class="journey-card-body">
+                            <span class="journey-region"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg> Coastal City</span>
+                            <h3>Da Nang</h3>
+                            <p class="text-vi">Không khí biển, núi Ngũ Hành Sơn và những cây cầu rực rỡ tạo nên một điểm dừng ven biển tinh tế giữa văn hóa và đại dương.</p>
+                            <p class="text-en">Ocean air, Marble Mountains, and bright bridges create an elegant coastal pause between culture and the sea.</p>
+                            <a href="#explore" class="journey-explore">Explore <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="journey-stop fade-in-left">
+                    <div class="journey-marker" aria-hidden="true"><svg class="icon"><use href="#icon-map-pin"></use></svg></div>
+                    <div class="journey-card glass">
+                        <div class="journey-image">
+                            <img src="assets/journey-placeholder.svg" alt="Hoi An image placeholder" width="900" height="620" loading="lazy" decoding="async">
+                        </div>
+                        <div class="journey-card-body">
+                            <span class="journey-region"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg> Lantern Town</span>
+                            <h3>Hoi An</h3>
+                            <p class="text-vi">Đèn lồng lụa, những tiệm may nhỏ và bữa tối bên sông biến mỗi buổi tối thành một ký ức ấm áp như thước phim.</p>
+                            <p class="text-en">Silk lanterns, small tailoring shops, and riverside dinners turn each evening into a warm, cinematic memory.</p>
+                            <a href="#explore" class="journey-explore">Explore <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="journey-stop fade-in-right">
+                    <div class="journey-marker" aria-hidden="true"><svg class="icon"><use href="#icon-map-pin"></use></svg></div>
+                    <div class="journey-card glass">
+                        <div class="journey-image">
+                            <img src="assets/journey-placeholder.svg" alt="Da Lat image placeholder" width="900" height="620" loading="lazy" decoding="async">
+                        </div>
+                        <div class="journey-card-body">
+                            <span class="journey-region"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg> Highland Retreat</span>
+                            <h3>Da Lat</h3>
+                            <p class="text-vi">Hương thông, vườn hoa và những biệt thự trong sương khiến thành phố cao nguyên này trở nên gần gũi và lãng mạn dịu dàng.</p>
+                            <p class="text-en">Pine-scented air, flower gardens, and misty villas make this highland city feel intimate and softly romantic.</p>
+                            <a href="#explore" class="journey-explore">Explore <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="journey-stop fade-in-left">
+                    <div class="journey-marker" aria-hidden="true"><svg class="icon"><use href="#icon-map-pin"></use></svg></div>
+                    <div class="journey-card glass">
+                        <div class="journey-image">
+                            <img src="assets/journey-placeholder.svg" alt="Ho Chi Minh City image placeholder" width="900" height="620" loading="lazy" decoding="async">
+                        </div>
+                        <div class="journey-card-body">
+                            <span class="journey-region"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg> Southern Energy</span>
+                            <h3>Ho Chi Minh City</h3>
+                            <p class="text-vi">Hoàng hôn trên sân thượng, những đại lộ lịch sử và khu chợ sống động khép lại hành trình bằng nhịp sống hiện đại của Việt Nam.</p>
+                            <p class="text-en">Rooftop sunsets, historic boulevards, and vibrant markets close the journey with Vietnam's modern rhythm.</p>
+                            <a href="#explore" class="journey-explore">Explore <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Vietnam Section -->
+    <section id="explore" class="explore">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title"><svg class="icon section-title-icon" aria-hidden="true"><use href="#icon-compass"></use></svg>Explore Vietnam</h2>
+                <p class="section-subtitle text-vi">Khám phá vẻ đẹp của ba miền Việt Nam</p>
+                <p class="section-subtitle text-en">Discover the beauty of Vietnam's three regions</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="explore-grid" id="exploreGrid" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title"><svg class="icon section-title-icon" aria-hidden="true"><use href="#icon-camera"></use></svg>Gallery</h2>
+                <p class="section-subtitle text-vi">Những khoảnh khắc được lưu lại trong các chuyến đi của tôi</p>
+                <p class="section-subtitle text-en">Moments captured from my travels</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="gallery-filters fade-in" aria-label="Gallery categories">
+                <button type="button" class="gallery-filter active" data-filter="all">All</button>
+                <button type="button" class="gallery-filter" data-filter="tours">Tours</button>
+                <button type="button" class="gallery-filter" data-filter="portrait">Portrait</button>
+                <button type="button" class="gallery-filter" data-filter="landscape">Landscape</button>
+                <button type="button" class="gallery-filter" data-filter="culture">Culture</button>
+            </div>
+
+            <div class="gallery-grid fade-in" id="galleryGrid" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true" role="dialog" aria-label="Gallery image preview">
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close gallery preview">
+            <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg>
+        </button>
+        <figure class="lightbox-figure">
+            <img src="" alt="" id="lightboxImage" decoding="async">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+    </div>
+
+    <!-- Travel Stories Section -->
+    <section id="stories" class="stories">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title"><svg class="icon section-title-icon" aria-hidden="true"><use href="#icon-book-open"></use></svg>Travel Stories</h2>
+                <p class="section-subtitle text-vi">Những câu chuyện video từ các chuyến phiêu lưu của tôi</p>
+                <p class="section-subtitle text-en">Video stories from my adventures</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="stories-grid" id="storiesGrid" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title"><svg class="icon section-title-icon" aria-hidden="true"><use href="#icon-mail"></use></svg>Get In Touch</h2>
+                <p class="section-subtitle text-vi">Gửi một lời chào trước khi hành trình bắt đầu</p>
+                <p class="section-subtitle text-en">Send a hello before the journey begins</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Social Links -->
+                <div class="social-links fade-in">
+                    <h3><svg class="icon heading-icon" aria-hidden="true"><use href="#icon-flower"></use></svg>Let's Stay Connected</h3>
+                    <div class="social-copy">
+                        <p class="text-vi">Nếu bạn muốn hỏi về Việt Nam,<br>chia sẻ một ý tưởng,<br>hay chỉ đơn giản là chào nhau...</p>
+                        <p class="text-vi">Tôi luôn rất vui khi nhận được tin nhắn từ bạn.</p>
+                        <p class="text-en">If you'd like to ask about Vietnam,<br>share an idea,<br>or simply say hello...</p>
+                        <p class="text-en">I'd always be happy to hear from you.</p>
+                    </div>
+                    <div class="social-icons" id="socialLinks" aria-label="Social links"></div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form glass fade-in" style="animation-delay: 0.1s" data-form-provider="placeholder" data-form-endpoint="" onsubmit="handleFormSubmit(event)">
+                    <div class="contact-form-heading">
+                        <h3><svg class="icon heading-icon" aria-hidden="true"><use href="#icon-flower"></use></svg>Start a Conversation</h3>
+                        <p class="text-vi">Mọi hành trình đáng nhớ<br>đều bắt đầu từ một lời chào.</p>
+                        <p class="text-en">Every unforgettable journey<br>begins with a simple hello.</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required class="form-input" aria-label="Your Name" autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required class="form-input" aria-label="Your Email" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Trip Type (e.g., Adventure, Cultural)" required class="form-input" aria-label="Trip Type">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell me about your dream trip..." rows="5" required class="form-input" aria-label="Tell me about your dream trip"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Let's Connect <svg class="icon icon-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer fade-in">
+        <div class="container">
+            <div class="footer-journal">
+                <div class="footer-message footer-message-vi">
+                    <p class="text-vi">Cảm ơn bạn đã dành thời gian ghé thăm hành trình của tôi.</p>
+                    <p class="text-vi">Hẹn gặp quý khách trên hành trình du lịch nào đó, thương yêu chính mình hơn và cùng ngắm nhìn thế giới rộng lớn tuyệt đẹp. 💓</p>
+                </div>
+
+                <div class="footer-message footer-message-en">
+                    <p class="text-en">Thank you for taking the time to visit my journey.</p>
+                    <p class="text-en">I hope to meet you on a journey someday, to cherish ourselves a little more and admire the beautiful, vast world together. 💓</p>
+                </div>
+
+                <div class="footer-signature">
+                    <p>Mỹ Trâm</p>
+                    <span>Vietnam Specialist</span>
+                    <span>Travel Storyteller</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
