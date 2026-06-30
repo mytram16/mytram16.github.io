@@ -11,129 +11,105 @@ const backToTopBtn = document.getElementById('backToTop');
 const navbar = document.querySelector('.navbar');
 const navItems = document.querySelectorAll('.nav-link');
 const pageSections = document.querySelectorAll('section');
+const languageButtons = document.querySelectorAll('.language-option');
 
 // ============== CONTENT REGISTRY ==============
 // Replace images, stories, videos, and social links here without editing layout markup.
 const siteContent = {
+    language: {
+        default: 'vi',
+        supported: ['vi', 'en']
+    },
     explore: [
         {
-            image: 'https://via.placeholder.com/400x250/ff5f95/ffffff?text=Northern+Vietnam',
+            image: 'assets/journey-placeholder.svg',
             alt: 'Northern Vietnam',
             title: 'Northern Vietnam',
-            destinations: ['Hanoi', 'Halong Bay', 'Sapa'],
+            destinations: ['Hanoi', 'Ninh Binh', 'Ha Long', 'Sapa'],
             descriptionVi: 'Cảm nhận nhịp sống phố cổ Hà Nội, vẻ đẹp mơ màng của vịnh Hạ Long và những tầng mây dịu trên núi rừng Sapa.',
-            descriptionEn: "Feel the rhythm of Hanoi's Old Quarter, the dreamy beauty of Halong Bay, and the soft layers of clouds over Sapa's mountains."
+            descriptionEn: "Feel the rhythm of Hanoi's Old Quarter, the dreamy beauty of Ha Long Bay, and the soft layers of clouds over Sapa's mountains.",
+            width: 900,
+            height: 620
         },
         {
-            image: 'https://via.placeholder.com/400x250/ff5f95/ffffff?text=Central+Vietnam',
+            image: 'assets/journey-placeholder.svg',
             alt: 'Central Vietnam',
             title: 'Central Vietnam',
-            destinations: ['Hoi An', 'Da Nang', 'Hue'],
+            destinations: ['Da Nang', 'Hue', 'Hoi An'],
             descriptionVi: 'Đi qua Hội An rực đèn lồng, những bờ biển xanh của Đà Nẵng và chiều sâu di sản cung đình Huế.',
-            descriptionEn: "Pass through lantern-lit Hoi An, Da Nang's blue coastlines, and the deep imperial heritage of Hue."
+            descriptionEn: "Pass through Da Nang's blue coastlines, Hue's deep imperial heritage, and lantern-lit Hoi An.",
+            width: 900,
+            height: 620
         },
         {
-            image: 'https://via.placeholder.com/400x250/ff5f95/ffffff?text=Southern+Vietnam',
+            image: 'assets/journey-placeholder.svg',
             alt: 'Southern Vietnam',
             title: 'Southern Vietnam',
             destinations: ['Ho Chi Minh City', 'Mekong Delta', 'Phu Quoc'],
             descriptionVi: 'Chạm vào năng lượng của Thành phố Hồ Chí Minh, dòng nước miền Tây và những ngày biển êm ở Phú Quốc.',
-            descriptionEn: 'Touch the energy of Ho Chi Minh City, the waterways of the Mekong Delta, and the calm sea days of Phu Quoc.'
+            descriptionEn: 'Touch the energy of Ho Chi Minh City, the waterways of the Mekong Delta, and the calm sea days of Phu Quoc.',
+            width: 900,
+            height: 620
         }
     ],
     gallery: [
         {
-            title: 'Lantern Walk in Hoi An',
-            location: 'Hoi An',
-            descriptionVi: 'Một khoảnh khắc dịu dàng dưới ánh đèn lồng phố cổ.',
-            descriptionEn: 'A gentle moment beneath the lantern light of the ancient town.',
-            category: 'tours',
+            title: 'Vietnam Through My Eyes',
+            location: 'Vietnam',
+            descriptionVi: 'Một album mở để lưu giữ những khung hình dịu dàng về Việt Nam.',
+            descriptionEn: 'An open album for gentle frames of Vietnam.',
+            category: 'eyes',
             variant: 'gallery-item-tall',
             placeholder: 'assets/gallery-placeholder.svg',
-            thumb: 'https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=700&q=80',
-            full: 'https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1500&q=88',
-            alt: 'Travelers walking beneath glowing lanterns in Hoi An'
+            thumb: 'assets/gallery-placeholder.svg',
+            full: 'assets/gallery-placeholder.svg',
+            alt: 'Vietnam Through My Eyes album placeholder'
         },
         {
-            title: 'Halong Bay Morning',
-            location: 'Halong Bay',
-            descriptionVi: 'Buổi sáng yên tĩnh trên mặt nước và những đảo đá vôi.',
-            descriptionEn: 'A quiet morning over calm water and limestone islands.',
-            category: 'landscape',
-            placeholder: 'assets/gallery-placeholder.svg',
-            thumb: 'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=700&q=80',
-            full: 'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1500&q=88',
-            alt: 'Limestone islands rising from calm water in Halong Bay'
-        },
-        {
-            title: 'Market Colors',
-            location: 'Local Market',
-            descriptionVi: 'Những sắc màu đời thường trong nhịp sống địa phương.',
-            descriptionEn: 'Everyday colors within the rhythm of local life.',
-            category: 'culture',
-            variant: 'gallery-item-wide',
-            placeholder: 'assets/gallery-placeholder.svg',
-            thumb: 'https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=700&q=80',
-            full: 'https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1500&q=88',
-            alt: 'A colorful local market scene in Vietnam'
-        },
-        {
-            title: 'Quiet Portrait',
-            location: 'Natural Light',
-            descriptionVi: 'Một chân dung yên ả trong ánh sáng mềm.',
-            descriptionEn: 'A quiet portrait in soft natural light.',
-            category: 'portrait',
-            variant: 'gallery-item-tall',
-            placeholder: 'assets/gallery-placeholder.svg',
-            thumb: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80',
-            full: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1500&q=88',
-            alt: 'Soft natural-light travel portrait'
-        },
-        {
-            title: 'Mekong River Route',
-            location: 'Mekong Delta',
-            descriptionVi: 'Một lối đi chậm rãi qua dòng nước miền Tây.',
-            descriptionEn: 'A slow route through the waterways of the Mekong Delta.',
-            category: 'tours',
-            placeholder: 'assets/gallery-placeholder.svg',
-            thumb: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=700&q=80',
-            full: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1500&q=88',
-            alt: 'Boat traveling through a quiet river route'
-        },
-        {
-            title: 'Terraced Highlands',
-            location: 'Highlands',
-            descriptionVi: 'Những thửa ruộng xanh trong ánh chiều mềm.',
-            descriptionEn: 'Green terraces held in soft afternoon light.',
-            category: 'landscape',
-            variant: 'gallery-item-wide',
-            placeholder: 'assets/gallery-placeholder.svg',
-            thumb: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80',
-            full: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1500&q=88',
-            alt: 'Green terraced landscape in soft afternoon light'
-        },
-        {
-            title: 'Temple Details',
-            location: 'Heritage Site',
-            descriptionVi: 'Những chi tiết kiến trúc nhỏ kể chuyện về di sản.',
-            descriptionEn: 'Small architectural details telling stories of heritage.',
+            title: 'Culture',
+            location: 'Vietnam',
+            descriptionVi: 'Không gian dành cho những câu chuyện văn hóa và đời sống địa phương.',
+            descriptionEn: 'A space for cultural stories and local life.',
             category: 'culture',
             placeholder: 'assets/gallery-placeholder.svg',
-            thumb: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=700&q=80',
-            full: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1500&q=88',
-            alt: 'Decorative temple architecture detail'
+            thumb: 'assets/gallery-placeholder.svg',
+            full: 'assets/gallery-placeholder.svg',
+            alt: 'Culture album placeholder'
         },
         {
-            title: 'Golden Hour Smile',
-            location: 'Golden Hour',
-            descriptionVi: 'Nụ cười ấm áp trong khoảnh khắc cuối ngày.',
-            descriptionEn: 'A warm smile in the final light of the day.',
-            category: 'portrait',
+            title: 'Cuisine',
+            location: 'Vietnam',
+            descriptionVi: 'Nơi những hương vị địa phương sẽ được kể lại bằng hình ảnh.',
+            descriptionEn: 'A place where local flavors will be told through images.',
+            category: 'cuisine',
+            variant: 'gallery-item-wide',
+            placeholder: 'assets/gallery-placeholder.svg',
+            thumb: 'assets/gallery-placeholder.svg',
+            full: 'assets/gallery-placeholder.svg',
+            alt: 'Cuisine album placeholder'
+        },
+        {
+            title: 'Landscapes',
+            location: 'Vietnam',
+            descriptionVi: 'Những miền núi, biển xanh và khoảng trời Việt Nam sẽ được thêm vào sau.',
+            descriptionEn: 'Mountains, blue seas, and Vietnamese skies will be added later.',
+            category: 'landscapes',
             variant: 'gallery-item-tall',
             placeholder: 'assets/gallery-placeholder.svg',
-            thumb: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80',
-            full: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1500&q=88',
-            alt: 'Warm golden-hour travel portrait'
+            thumb: 'assets/gallery-placeholder.svg',
+            full: 'assets/gallery-placeholder.svg',
+            alt: 'Landscapes album placeholder'
+        },
+        {
+            title: 'Moments',
+            location: 'Vietnam',
+            descriptionVi: 'Những khoảnh khắc nhỏ, mềm và đáng nhớ trên đường đi.',
+            descriptionEn: 'Small, soft, memorable moments along the way.',
+            category: 'moments',
+            placeholder: 'assets/gallery-placeholder.svg',
+            thumb: 'assets/gallery-placeholder.svg',
+            full: 'assets/gallery-placeholder.svg',
+            alt: 'Moments album placeholder'
         }
     ],
     stories: [
@@ -162,6 +138,16 @@ const siteContent = {
             videoUrl: ''
         }
     ],
+    contactLinks: {
+        email: 'mailto:your-email@gmail.com',
+        zalo: '#',
+        whatsapp: '#',
+        viber: '#',
+        youtube: '#',
+        tiktok: '#',
+        facebook: '#',
+        instagram: '#'
+    },
     socialLinks: [
         { label: 'YouTube', url: '#', icon: 'icon-youtube' },
         { label: 'TikTok', url: '#', icon: 'icon-tiktok' },
@@ -266,14 +252,60 @@ function renderSocialLinks() {
     `).join('');
 }
 
+function applyContactLinkPlaceholders() {
+    document.querySelectorAll('[data-contact-link]').forEach(link => {
+        const key = link.dataset.contactLink;
+        if (siteContent.contactLinks[key]) {
+            link.href = siteContent.contactLinks[key];
+        }
+    });
+}
+
 function renderReusableContent() {
     renderExploreCards();
     renderGalleryCards();
     renderStoryCards();
     renderSocialLinks();
+    applyContactLinkPlaceholders();
 }
 
 renderReusableContent();
+
+// ============== LANGUAGE SYSTEM ==============
+/**
+ * Store a simple language preference now while keeping bilingual content visible.
+ * Future phases can use document.body.dataset.lang to show fuller translations.
+ */
+function initLanguageSystem() {
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    const initialLanguage = siteContent.language.supported.includes(savedLanguage)
+        ? savedLanguage
+        : siteContent.language.default;
+
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        document.body.dataset.lang = lang;
+        localStorage.setItem('preferredLanguage', lang);
+
+        languageButtons.forEach(button => {
+            const isActive = button.dataset.lang === lang;
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+        });
+    }
+
+    languageButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (siteContent.language.supported.includes(button.dataset.lang)) {
+                setLanguage(button.dataset.lang);
+            }
+        });
+    });
+
+    setLanguage(initialLanguage);
+}
+
+initLanguageSystem();
 
 // ============== MOBILE MENU TOGGLE ==============
 /**
