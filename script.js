@@ -312,9 +312,11 @@ initLanguageSystem();
  * Toggle mobile menu visibility
  */
 mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = !navLinks.classList.contains('active');
     mobileMenuBtn.classList.toggle('active');
     navLinks.classList.toggle('active');
-    navbar?.classList.toggle('menu-open', navLinks.classList.contains('active'));
+    navbar?.classList.toggle('menu-open', isOpen);
+    mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
 });
 
 // Close mobile menu when a link is clicked
