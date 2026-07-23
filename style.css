@@ -2366,7 +2366,7 @@ body.lightbox-open {
     background:
         radial-gradient(ellipse at 50% 0%, rgba(255, 95, 149, 0.08) 0%, rgba(255, 95, 149, 0) 44%),
         linear-gradient(180deg, var(--background) 0%, #fff8fb 100%);
-    padding: clamp(4rem, 8vw, 7rem) 0 clamp(2rem, 4vw, 4rem);
+    padding: clamp(2.6rem, 5.2vw, 4.55rem) 0 clamp(2rem, 4vw, 4rem);
     border-top: 1px solid rgba(255, 95, 149, 0.08);
 }
 
@@ -2441,17 +2441,33 @@ body.lightbox-open {
 }
 .footer-legal-copyright {
     color: rgba(29,29,31,0.56);
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     font-weight: 500;
 }
 .footer-legal-credit {
     color: rgba(29,29,31,0.46);
-    font-size: 0.84rem;
+    font-size: 0.8125rem;
     margin-top: 0.45rem;
     font-weight: 400;
 }
 .footer-credit-name {
     font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-credit-name:hover {
+    opacity: 0.8;
+    color: var(--primary-dark);
+}
+
+body.dark-mode .footer-credit-name {
+    color: var(--primary-light);
+}
+
+body.dark-mode .footer-credit-name:hover {
+    color: var(--primary-color);
 }
 
 /* ============== BACK TO TOP BUTTON ============== */
