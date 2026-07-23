@@ -139,7 +139,7 @@ const siteContent = {
         }
     ],
     contactLinks: {
-        email: 'mailto:your-email@gmail.com',
+        email: 'mailto:mytram16.dn@gmail.com',
         zalo: '#',
         whatsapp: '#',
         viber: '#',
