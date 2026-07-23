@@ -149,10 +149,10 @@ const siteContent = {
         instagram: '#'
     },
     socialLinks: [
-        { label: 'YouTube', url: '#', icon: 'icon-youtube' },
-        { label: 'TikTok', url: '#', icon: 'icon-tiktok' },
-        { label: 'Facebook', url: '#', icon: 'icon-facebook' },
-        { label: 'Instagram', url: '#', icon: 'icon-instagram' }
+        { label: 'Facebook', url: 'https://www.facebook.com/share/16xM6QNN2K/', icon: 'icon-facebook' },
+        { label: 'Instagram', url: 'https://www.instagram.com/mytram16.vn', icon: 'icon-instagram' },
+        { label: 'TikTok', url: 'https://www.tiktok.com/@mytram16.vn', icon: 'icon-tiktok' },
+        { label: 'GitHub', url: 'https://github.com/mytram16', icon: 'icon-user-round' }
     ]
 };
 
@@ -244,7 +244,7 @@ function renderSocialLinks() {
     if (!list) return;
 
     list.innerHTML = siteContent.socialLinks.map(link => `
-        <a href="${escapeHTML(link.url)}" class="social-icon glass" title="${escapeHTML(link.label)}" aria-label="${escapeHTML(link.label)}">
+        <a href="${escapeHTML(link.url)}" class="social-icon glass" title="${escapeHTML(link.label)}" aria-label="${escapeHTML(link.label)}" target="_blank" rel="noopener noreferrer">
             <svg class="icon" aria-hidden="true"><use href="#${escapeHTML(link.icon)}"></use></svg>
             <span>${escapeHTML(link.label)}</span>
             <svg class="icon social-arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
