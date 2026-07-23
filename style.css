@@ -1254,6 +1254,30 @@ body.lightbox-open {
     box-shadow: 0 14px 34px rgba(255, 95, 149, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
 
+.contact-qr-image {
+    width: min(220px, 100%);
+    max-width: 260px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 24px;
+    background: white;
+    padding: 0.8rem;
+    box-shadow: inset 0 0 0 1px rgba(255, 95, 149, 0.08);
+}
+
+.qr-caption {
+    margin: 0.75rem 0 0;
+    color: rgba(29, 29, 31, 0.72);
+    font-size: 0.92rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.qr-caption.text-en {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
 .qr-placeholder {
     position: relative;
     width: 108px;

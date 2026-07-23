@@ -140,9 +140,9 @@ const siteContent = {
     ],
     contactLinks: {
         email: 'mailto:mytram16.dn@gmail.com',
-        zalo: '#',
-        whatsapp: '#',
-        viber: '#',
+        zalo: 'https://zalo.me/0787752716',
+        whatsapp: 'https://wa.me/84787752716',
+        viber: 'viber://chat?number=%2B84787752716',
         youtube: '#',
         tiktok: '#',
         facebook: '#',
