@@ -455,6 +455,20 @@ if (journeyStops.length) {
     });
 }
 
+// Add descriptive aria-labels to journey explore links for accessibility
+function setExploreAriaLabels() {
+    document.querySelectorAll('.journey-stop').forEach(stop => {
+        const regionEl = stop.querySelector('.journey-region');
+        const btn = stop.querySelector('.journey-explore');
+        if (regionEl && btn) {
+            const regionText = regionEl.textContent.replace(/\s+/g, ' ').trim();
+            btn.setAttribute('aria-label', `Explore ${regionText}`);
+        }
+    });
+}
+
+setExploreAriaLabels();
+
 // ============== CONTACT FORM HANDLING ==============
 /**
  * Handle contact form submission
